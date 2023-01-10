@@ -20,7 +20,9 @@ public class SignatureController {
 
     @PostMapping("/sign")
     public ResponseEntity<ResponseBodyDto> sign(@RequestBody @Valid SignatureDto input) {
-        return new ResponseEntity<>(signatureService.sign(input), HttpStatus.OK);
+        signatureService.sign();
+        return new ResponseEntity<>(new ResponseBodyDto(RestResponseMessages.ADD_SIGN),
+            HttpStatus.OK);
     }
 
 }

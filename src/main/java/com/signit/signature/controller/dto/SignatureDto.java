@@ -20,9 +20,10 @@ public class SignatureDto {
     @JsonSerialize
     @NotNull(message = EMPTY_VALIDATION_XMLBASE64_ERROR)
     @NotBlank(message = EMPTY_VALIDATION_XMLBASE64_ERROR)
-    private String docBase64;
-
+    private String xmlBase64;
+    @NotNull(message = EMPTY_VALIDATION_DOCS_DATA_ERROR)
+    @NotBlank(message = EMPTY_VALIDATION_DOCS_DATA_ERROR)
     @JsonSerialize
-    private KycData kycData;
+    private String docsData;
 
 }
